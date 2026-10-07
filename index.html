@@ -111,6 +111,31 @@ html.menu-open,html.menu-open body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.hv .ph{animation:none}}
 [hidden]{display:none!important}
 @media (min-width:700px){.btns{grid-template-columns:repeat(3,1fr)}body{padding-bottom:0}.bar{display:none}.htel{display:block}.hv .ph{aspect-ratio:16/8}.vc{font-size:28px;padding:30px 36px 30px 32px;top:48px}nav a{font-size:12px}}
+
+/* ===== 画像差し替え用 ===== */
+.ph.photo{
+  position:relative;
+  overflow:hidden;
+  padding:0;
+  color:transparent;
+  background:var(--ph);
+}
+.ph.photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.ph.photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.12));
+}
+.hv .ph.photo img{object-position:center 55%}
+.case .ph.photo img{object-position:center}
+
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -125,7 +150,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
 <!-- ========== トップページ ========== -->
 <main id="p-top" class="page">
 <div class="hero">
-<div class="hv"><div class="ph">【画像】晴れた空の下の瓦屋根と住宅の外観（または日本人の職人さんが施主の方に笑顔で説明している様子）</div>
+<div class="hv"><div class="ph photo"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=85" alt="住宅の外観と屋根" loading="lazy"></div>
 <h1 class="vc"><span>住まいのことを、</span><span>気軽に話せる</span><span>工務店でありたい。</span></h1>
 <div class="pg"><b>1</b><b>2</b><b>3</b></div></div>
 <div class="wrap">
@@ -146,7 +171,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
 <li>見積りを頼むと、断りづらくなりそうで不安</li>
 </ul>
 <p class="cta">当てはまることがあれば、お気軽にご相談ください。</p>
-<div class="ph tall">【画像】日本人のご夫婦が自宅の前で少し考えている様子</div>
+<div class="ph tall photo"><img src="https://download.pakutaso.com/shared/img/thumb/fk-010A0548.jpg" alt="住まいの外観" loading="lazy"></div>
 </div></section>
 
 <section class="alt"><div class="wrap">
@@ -154,16 +179,16 @@ html.menu-open,html.menu-open body{overflow:hidden}
 <div class="card"><h3>お施主様の気持ちに寄り添います</h3><p>創業25年、お施主様のお気持ちを一番に、工事を進めてきました。</p></div>
 <div class="card"><h3>近隣のみなさまにも配慮します</h3><p>作業の前に近隣へご挨拶し、作業のお知らせをしています。ホコリや音のご心配にも向き合います。</p></div>
 <div class="card"><h3>分からないことは、分かるまで説明します</h3><p>専門的なことも、できるだけ分かりやすくお話しします。</p></div>
-<div class="ph">【画像】作業前に近隣へ挨拶する日本人職人／打ち合わせの様子</div>
+<div class="ph photo"><img src="https://download.pakutaso.com/shared/img/thumb/K1_S4690_TP_V.jpg" alt="建築現場での打ち合わせ" loading="lazy"></div>
 </div></section>
 
 <section><div class="wrap">
 <h2>修和工業にできること</h2>
-<div class="case"><div class="ph">【画像】屋根作業</div><aside><small>SERVICE</small><h3>屋根の修理・工事・リフォーム</h3></aside></div>
+<div class="case"><div class="ph photo"><img src="https://download.pakutaso.com/shared/img/thumb/K1_S4690_TP_V.jpg" alt="屋根・建築工事" loading="lazy"></div><aside><small>SERVICE</small><h3>屋根の修理・工事・リフォーム</h3></aside></div>
 <p class="cd">雨漏りの修理、屋根の葺替えなどに対応しています。</p>
-<div class="case"><div class="ph">【画像】修理・交換の手元</div><aside><small>SERVICE</small><h3>修理・交換・取り付け</h3></aside></div>
+<div class="case"><div class="ph photo"><img src="https://download.pakutaso.com/shared/img/thumb/OZP85_grainda1188_TP_V.jpg" alt="修理作業" loading="lazy"></div><aside><small>SERVICE</small><h3>修理・交換・取り付け</h3></aside></div>
 <p class="cd">住まいの「ちょっと困った」にお応えします。</p>
-<div class="case"><div class="ph">【画像】解体前後の現場</div><aside><small>SERVICE</small><h3>大規模工事</h3></aside></div>
+<div class="case"><div class="ph photo"><img src="https://download.pakutaso.com/shared/img/thumb/K1_S4690_TP_V.jpg" alt="建物の工事現場" loading="lazy"></div><aside><small>SERVICE</small><h3>大規模工事</h3></aside></div>
 <p class="cd">解体工事など、まとまった工事のご相談もお受けしています。</p>
 <div class="btns"><a class="btn m" href="#service">サービスの詳細を見る</a></div>
 </div></section>
@@ -171,7 +196,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
 <section class="alt"><div class="wrap">
 <h2>施工事例</h2>
 <p class="lead">〇〇〇〇（工事前・工事後の写真と、工事内容・工期・お客様の声を掲載します）</p>
-<div class="grid2"><div class="ph sq">【画像】施工前</div><div class="ph sq">【画像】施工後</div></div>
+<div class="grid2"><div class="ph sq photo"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="施工前の住宅" loading="lazy"></div><div class="ph sq photo"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85" alt="施工後の住宅" loading="lazy"></div></div>
 <p class="cta" style="margin-top:20px">同じようなお悩みがあれば、写真を送っていただくだけでもご相談できます。</p>
 </div></section>
 
@@ -200,7 +225,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
 <h2>修和工業について</h2>
 <p>修和工業は、丸亀市で創業25年、屋根の葺替えや修繕、解体工事を中心に、リフォーム工事を行っている会社です。「お施主様の気持ちになって工事をする」ことを、一番大切にしてきました。どんな小さなご相談でも、まずはお聞かせください。</p>
 <p class="note">代表：〇〇〇〇</p>
-<div class="ph tall">【画像】代表と職人さんの集合写真（日本人）／事務所や車両の外観</div>
+<div class="ph tall photo"><img src="https://download.pakutaso.com/shared/img/thumb/K1_S4690_TP_V.jpg" alt="建築工事の職人" loading="lazy"></div>
 <table>
 <tr><th>会社名</th><td>有限会社修和工業</td></tr>
 <tr><th>所在地</th><td>〒763-0043<br>香川県丸亀市通町78</td></tr>
@@ -237,7 +262,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
 
 <section class="alt"><div class="wrap">
 <h2>屋根のことなら、お任せください</h2>
-<div class="ph">【画像】屋根作業中の日本人職人／施工前後の屋根</div>
+<div class="ph photo"><img src="https://download.pakutaso.com/shared/img/thumb/K1_S4690_TP_V.jpg" alt="屋根・建築工事" loading="lazy">中の日本人職人／施工前後の屋根</div>
 <p>雨漏りの修理や、屋根の葺替えに対応しています。「いつ頃直したほうがいいのか分からない」という段階でも、お気軽にご相談ください。屋根の状態を拝見して、分かりやすくご説明します。</p>
 <h3>こんなお悩みに</h3>
 <ul class="chk"><li>雨漏りがする</li><li>屋根の傷みが気になる</li><li>葺替えを考えている</li></ul>
@@ -247,13 +272,13 @@ html.menu-open,html.menu-open body{overflow:hidden}
 
 <section><div class="wrap">
 <h2>住まいの「ちょっと困った」に</h2>
-<div class="ph">【画像】作業中の手元</div>
+<div class="ph photo"><img src="https://download.pakutaso.com/shared/img/thumb/OZP85_grainda1188_TP_V.jpg" alt="工事作業" loading="lazy"></div>
 <p>修理や交換、取り付けなど、住まいの小さなお困りごとにも対応します。〇〇〇〇（対応可能な内容を記載）</p>
 </div></section>
 
 <section class="alt"><div class="wrap">
 <h2>まとまった工事もご相談ください</h2>
-<div class="ph">【画像】解体前後の現場（養生の様子が分かるもの）</div>
+<div class="ph photo"><img src="https://download.pakutaso.com/shared/img/thumb/K1_S4690_TP_V.jpg" alt="建物の工事現場" loading="lazy">（養生の様子が分かるもの）</div>
 <p>解体工事など、規模の大きな工事も承っています。建て替えや大きな改修をお考えの方は、近隣への配慮も含めてご相談ください。〇〇〇〇（対応可能な工事を記載）</p>
 </div></section>
 
